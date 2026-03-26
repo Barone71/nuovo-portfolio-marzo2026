@@ -1,0 +1,56 @@
+/* font custom */
+@font-face {
+  font-family: 'FreeSans';
+  src: url('../assets/FreeSans.otf') format('opentype');
+  font-weight: 300 900;
+  font-style: normal;
+}
+
+:root {
+  --ff: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --fs: 'FreeSans', 'Georgia', serif;
+}
+
+/* dark mode (default) */
+[data-theme="dark"] {
+  --bg:         #0a0a0a;
+  --bg2:        #131313;
+  --bg3:        #1c1c1c;
+  --fg:         #f0f0ed;
+  --fg2:        rgba(240, 240, 237, 0.50);
+  --fg3:        rgba(240, 240, 237, 0.22);
+  --brd:        rgba(255, 255, 255, 0.07);
+  --acc-from:   #3ecfda;
+  --acc-to:     #2a8f96;
+  --acc-fg:     #0a0a0a;
+  --scr:        #3ecfda;
+  --hero-ov: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0)    0%,
+    rgba(10,10,10,0)    38%,
+    rgba(10,10,10,0.75) 82%,
+    rgba(10,10,10,1)    100%
+  );
+}
+
+/* light mode */
+[data-theme="light"] {
+  --bg:         #f3f2ee;
+  --bg2:        #eae9e4;
+  --bg3:        #e0dfd9;
+  --fg:         #111111;
+  --fg2:        rgba(17, 17, 17, 0.52);
+  --fg3:        rgba(17, 17, 17, 0.28);
+  --brd:        rgba(0, 0, 0, 0.08);
+  --acc-from:   #7c3aed;
+  --acc-to:     #a855f7;
+  --acc-fg:     #ffffff;
+  --scr:        #a855f7;
+  --hero-ov: linear-gradient(
+    to bottom,
+    rgba(243,242,238,0)    0%,
+    rgba(243,242,238,0)    38%,
+    rgba(243,242,238,0.78) 82%,
+    rgba(243,242,238,1)    100%
+  );
+}

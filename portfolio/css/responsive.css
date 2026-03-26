@@ -1,0 +1,30 @@
+/* responsive - sotto i 900px diventa colonna singola */
+@media (max-width: 900px) {
+  nav { padding: 16px 20px; }
+  .nav-links { display: none; }
+
+  section { padding: 76px 20px; }
+
+  #hero .hero-bottom { padding: 0 20px 44px; }
+  .hero-headline { font-size: 44px; margin-bottom: 28px; }
+  .typewriter-pill { min-width: 180px; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+
+  .exp-item { grid-template-columns: 1fr; }
+  .exp-num { display: none; }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .projects-grid { grid-template-columns: 1fr; gap: 36px; }
+
+  .lang-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .contact-layout { grid-template-columns: 1fr; gap: 48px; }
+  #contact { padding: 76px 20px 68px; }
+  .contact-big { font-size: 36px; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  footer { flex-direction: column; gap: 16px; text-align: center; }
+}
