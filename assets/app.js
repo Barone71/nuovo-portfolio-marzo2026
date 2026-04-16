@@ -261,7 +261,7 @@ async function submitForm(e){
   const btn=document.getElementById('fBtn'),note=document.getElementById('fNote');
   btn.textContent='...';btn.disabled=true;btn.style.opacity='.6';
   try{
-    const res=await fetch('https://formspree.io/f/xkgjqvoa',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,message:msg})});
+    const res=await fetch('https://formspree.io/f/mlgajeov',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({name,email,message:msg})});
     if(res.ok){document.getElementById('formArea').innerHTML=`<div class="form-success"><span class="form-success-icon">✓</span><p>${t.form_ok}</p></div>`;}
     else{note.textContent=t.form_err;note.className='form-error';btn.textContent=t.fs;btn.disabled=false;btn.style.opacity='1';}
   }catch{note.textContent=t.form_err;note.className='form-error';btn.textContent=t.fs;btn.disabled=false;btn.style.opacity='1';}
