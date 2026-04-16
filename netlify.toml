@@ -1,0 +1,27 @@
+[build]
+  publish = "."
+
+# redirect radice a /it/
+[[redirects]]
+  from = "/"
+  to   = "/it/"
+  status = 301
+  force  = true
+
+# fallback 404 → it
+[[redirects]]
+  from   = "/*"
+  to     = "/it/"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

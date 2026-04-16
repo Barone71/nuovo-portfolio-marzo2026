@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Full Stack Developer with 2 years of experience. Java · Spring Boot · React · TypeScript · PostgreSQL · Docker."/>
+<title>Francesco Antonio Afferrante — Full Stack Developer</title>
+<meta property="og:title" content="Francesco Antonio Afferrante — Full Stack Developer"/>
+<meta property="og:description" content="Full Stack Developer with 2 years of experience. Java · Spring Boot · React · TypeScript · PostgreSQL · Docker."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://faafferrante.netlify.app/en/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="canonical" href="https://faafferrante.netlify.app/en/"/>
+<link rel="alternate" hreflang="it" href="https://faafferrante.netlify.app/it/"/>
+<link rel="alternate" hreflang="en" href="https://faafferrante.netlify.app/en/"/>
+<link rel="alternate" hreflang="es" href="https://faafferrante.netlify.app/es/"/>
+<link rel="alternate" hreflang="x-default" href="https://faafferrante.netlify.app/it/"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230a0a0a'/><text x='50' y='68' font-family='Inter,Arial,sans-serif' font-size='38' font-weight='800' fill='%233ecfda' text-anchor='middle' letter-spacing='-2'>faa.</text></svg>"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Crimson+Pro:wght@300;400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+<nav id="navbar">
+  <div class="nav-logo" onclick="smoothTo('#hero')" role="button" tabindex="0" onkeypress="if(event.key==='Enter')smoothTo('#hero')">faa<em>.</em></div>
+  <div class="nav-links">
+    <a onclick="smoothTo('#about')" data-t="na">Su di me</a>
+    <a onclick="smoothTo('#experience')" data-t="ne">Esperienza</a>
+    <a onclick="smoothTo('#skills')" data-t="nsk">Skills</a>
+    <a onclick="smoothTo('#projects')" data-t="np">Progetti</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-wrap" id="langWrap">
+      <button class="lang-trigger" id="langTrigger" onclick="toggleLang()">
+        <span id="langFlag">🇮🇹</span>
+        <span class="lang-trigger-label" id="langLabel">Italiano</span>
+        <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4"/></svg>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <button class="lang-option active" onclick="setLang('it')"><span class="lflag">🇮🇹</span>Italiano</button>
+        <button class="lang-option" onclick="setLang('en')"><span class="lflag">🇬🇧</span>English</button>
+        <button class="lang-option" onclick="setLang('es')"><span class="lflag">🇪🇸</span>Español</button>
+      </div>
+    </div>
+    <div class="mode-pill" onclick="toggleTheme()" title="cambia tema">
+      <div class="mode-icon-wrap active" id="moonWrap">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </div>
+      <div class="mode-icon-wrap" id="sunWrap">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </div>
+    </div>
+  </div>
+</nav>
+<section id="hero">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="hero-bottom">
+    <div class="hero-intro-block">
+      <div class="hero-name-line">Francesco Antonio <strong>Afferrante</strong></div>
+      <div class="hero-tw-row">
+        <div class="typewriter-pill"><span id="tw-text"></span><span class="typewriter-cursor"></span></div>
+      </div>
+    </div>
+    <div class="hero-divider"></div>
+    <h1 class="hero-headline"><span data-t="h1">Build things</span><br><span data-t="h2">that </span><span class="hero-accent" data-t="h2a">matter</span></h1>
+    <div class="hero-actions-row">
+      <a href="#contact" onclick="smoothTo('#contact');return false;" class="btn-primary" data-t="nc">Contatti</a>
+      <a id="cvBtn" class="btn-ghost" data-t="cv">↓ Scarica CV</a>
+    </div>
+  </div>
+  <div class="hero-scroll" data-t="scroll">Scorri</div>
+</section>
+<section id="about">
+  <div class="fade-up section-header"><h2 class="section-title" data-t="at"></h2></div>
+  <div class="about-grid">
+    <div class="fade-up" style="transition-delay:80ms"><div class="about-text" id="aboutText"></div></div>
+    <div class="fade-up" style="transition-delay:160ms"><div class="about-stats" id="aboutStats"></div></div>
+  </div>
+</section>
+<section id="experience">
+  <div class="fade-up section-header"><h2 class="section-title" data-t="et"></h2></div>
+  <div class="exp-list" id="expList"></div>
+  <div style="margin-top:72px">
+    <div class="fade-up section-header"><h2 class="section-title" style="font-size:clamp(26px,3.4vw,44px)" data-t="edt"></h2></div>
+    <div class="exp-list" id="eduList" style="margin-top:36px"></div>
+  </div>
+</section>
+<section id="skills">
+  <div class="fade-up section-header"><h2 class="section-title" data-t="skt"></h2></div>
+  <div class="skills-grid" id="skillsGrid"></div>
+</section>
+<section id="projects">
+  <div class="fade-up section-header"><h2 class="section-title" data-t="pt"></h2></div>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+<section id="languages">
+  <div class="fade-up section-header"><h2 class="section-title" data-t="lt"></h2></div>
+  <div class="lang-grid" id="langGrid"></div>
+</section>
+<section id="certifications" style="background:var(--bg2)">
+  <div class="fade-up section-header"><h2 class="section-title" data-t="ct"></h2></div>
+  <div class="cert-list" id="certList"></div>
+</section>
+<section id="contact">
+  <div class="fade-up section-header">
+    <p class="contact-big" id="contactBig"></p>
+    <div class="contact-layout">
+      <div class="contact-row" id="contactLinks"></div>
+      <div>
+        <div class="contact-form-title" data-t="ft">Oppure scrivimi direttamente</div>
+        <div id="formArea">
+          <form id="contactForm" onsubmit="submitForm(event)" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" data-t="fn">Nome</label>
+                <input class="form-input" type="text" id="fName" placeholder="es. Mario Rossi" required/>
+              </div>
+              <div class="form-field">
+                <label class="form-label" data-t="fe">Email</label>
+                <input class="form-input" type="email" id="fEmail" placeholder="la tua email" required/>
+              </div>
+            </div>
+            <div class="form-field form-full" style="margin-bottom:0">
+              <label class="form-label" data-t="fm">Messaggio</label>
+              <textarea class="form-input" id="fMsg" rows="6" placeholder="scrivi qui il tuo messaggio" required></textarea>
+            </div>
+            <div class="form-submit-row">
+              <button class="btn-primary" type="submit" id="fBtn" data-t="fs">Invia messaggio</button>
+              <span class="form-note" id="fNote" data-t="fnote">Rispondo entro 24h.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-logo">faa.</div>
+  <div class="footer-copy">© 2025 Francesco Antonio Afferrante</div>
+  <div class="social-links">
+    <a href="https://github.com/barone71" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+    <a href="https://www.linkedin.com/in/francescoantonio-afferrante/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+    <a href="mailto:faafferrante@gmail.com" class="social-link">Email</a>
+  </div>
+</footer>
+<script>const LANG='en';</script>
+<script src="../assets/app.js"></script>
+</body>
+</html>
