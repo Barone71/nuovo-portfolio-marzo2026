@@ -1,14 +1,13 @@
 [build]
   publish = "."
+  command = ""
 
-# redirect radice a /it/
 [[redirects]]
-  from = "/"
-  to   = "/it/"
+  from   = "/"
+  to     = "/it/"
   status = 301
   force  = true
 
-# fallback 404 → it
 [[redirects]]
   from   = "/*"
   to     = "/it/"
